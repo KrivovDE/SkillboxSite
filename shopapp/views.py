@@ -4,7 +4,7 @@ from django.contrib.auth.models import Group
 from django.http import HttpRequest
 from django.shortcuts import render
 
-from shopapp.models import Product
+from shopapp.models import Product, Order
 
 
 def shop_index(reguest: HttpRequest):
@@ -32,3 +32,10 @@ def products_list(request: HttpRequest):
         'products': Product.objects.all()
     }
     return render(request, 'shopapp/products_list.html', context=context)
+
+
+def order_list(request: HttpRequest):
+    context = {
+        'orders': Order.objects.select_related('user').prefetch_related('products').all()
+    }
+    return render(request, 'shopapp/order_list.html', context=context)
