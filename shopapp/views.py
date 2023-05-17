@@ -4,8 +4,10 @@ from django.contrib.auth.models import Group
 from django.http import HttpRequest
 from django.shortcuts import render
 
+from shopapp.models import Product
 
-def schop_index(reguest: HttpRequest):
+
+def shop_index(reguest: HttpRequest):
     prodocts = [
         ('Laptop', 1999),
         ('Desktop', 3555),
@@ -23,3 +25,10 @@ def groups_list(request: HttpRequest):
         'groups': Group.objects.prefetch_related('permissions').all(),
     }
     return render(request, 'shopapp/groups_list.html', context=context)
+
+
+def products_list(request: HttpRequest):
+    context = {
+        'products': Product.objects.all()
+    }
+    return render(request, 'shopapp/products_list.html', context=context)
