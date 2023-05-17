@@ -1,0 +1,26 @@
+{% extends 'shopapp/base.html' %}
+    {% block title %}
+        Schop Index
+    {% endblock %}
+
+    {% block body %}
+        <div>
+            <ul>
+                {% for name, price in prodocts %}
+                    <li>{{ name }} ({{ name|length }}) -- {{ price }} $</li>
+                    {% if name|length_is:'7' %}
+                        <span>Lucky product!</span>
+                    {% endif %}
+                 {% empty %}
+                    No products
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            Time running: {{ time_running }}
+        </div>
+        <div>
+            {% lorem 3 p random %}
+        </div>
+
+    {% endblock %}
