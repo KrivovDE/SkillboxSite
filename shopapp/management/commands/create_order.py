@@ -10,13 +10,13 @@ class Command(BaseCommand):
     """
 
     def handle(self, *args, **options):
-        self.stdout.write('Create order')
+        self.stdout.write("Create order")
 
-        user = User.objects.get(username='admin')
+        user = User.objects.get(username="admin")
         order = Order.objects.get_or_create(
-            delivery_address='Voronezh',
-            promocode='Promo321',
+            delivery_address="Voronezh",
+            promocode="Promo321",
             user=user,
         )
 
-        self.stdout.write(self.style.SUCCESS(f'Order created {order}'))
+        self.stdout.write(self.style.SUCCESS(f"Order created {order}"))

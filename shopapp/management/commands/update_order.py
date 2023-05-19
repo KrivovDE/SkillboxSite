@@ -9,7 +9,7 @@ class Command(BaseCommand):
     """
 
     def handle(self, *args, **options):
-        self.stdout.write('Update orders')
+        self.stdout.write("Update orders")
 
         order = Order.objects.first()
         products = Product.objects.all()
@@ -18,4 +18,4 @@ class Command(BaseCommand):
             order.products.add(product)
         order.save()
 
-        self. stdout.write(self.style.SUCCESS(f'Orders created {order.products.all()}'))
+        self.stdout.write(self.style.SUCCESS(f"Orders created {order.products.all()}"))
