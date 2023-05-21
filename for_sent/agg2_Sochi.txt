@@ -1,0 +1,10 @@
+vsi id1111111_OFM1111111_1c11111111
+ pwsignal ldp
+  peer 10.0.0.52 negotiation-vc-id 9310150 tnl-policy atn_policy upe ignore-standby-state
+  peer 10.0.0.52 negotiation-vc-id 9310150 pw atn_11111_0219
+  peer  10.0.0.14
+vsi id2222222_OFM2222222_1c22222222
+ pwsignal ldp
+  peer 10.0.0.103 negotiation-vc-id 93110150 tnl-policy atn_policy upe ignore-standby-state
+  peer 10.0.0.103 negotiation-vc-id 93110150 pw atn_22222_0221
+  peer  10.0.0.14
