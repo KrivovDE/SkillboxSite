@@ -1,0 +1,22 @@
+10.0.0.52
+  int GigabitEthernet0/2/19.10
+	un mpls l2vc 10.0.0.4 pw-template PW 192004051 ignore-standby-state
+	mpls l2vc  10.0.0.15 pw-template PW 9310150 ignore-standby-state
+	mpls l2vc  10.0.0.14 pw-template PW 9310140 secondary
+	mpls l2vpn redundancy master
+	mpls l2vpn reroute delay 90
+	return
+Y
+save
+Y
+10.0.0.103
+  int GigabitEthernet0/2/21.1808
+	un mpls l2vc 10.0.0.4 pw-template PW 931808040 ignore-standby-state
+	mpls l2vc  10.0.0.15 pw-template PW 93110150 ignore-standby-state
+	mpls l2vc  10.0.0.14 pw-template PW 93110140 secondary
+	mpls l2vpn redundancy master
+	mpls l2vpn reroute delay 90
+	return
+Y
+save
+Y
