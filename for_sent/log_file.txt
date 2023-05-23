@@ -1,0 +1,122 @@
+******* IP: 10.0.0.52 подключен! *******
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Username:Username
+Password:
+Info: The max number of VTY users is 21, the number of current VTY users online is 1, and total number of terminal users online is 1.
+      The current login time is 2023-05-15 10:55:36+03:00.
+Warning: The password of the root account is the default password. Please change the password.
+<atn-11111-Name1.SOCHI>dis version
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 8.200 (ATN 910C-G V300R006C10SPC300)
+Copyright (C) 2012-2020 Huawei Technologies Co., Ltd.
+HUAWEI ATN 910C-G uptime is 436 days, 7 hours, 53 minutes 
+Patch Version: V300R006SPH032
+
+ATN 910C-G version information:
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+CXP version information:
+
+CXP (Master) 2  : uptime is 436 days, 7 hours, 51 minutes
+  StartupTime   2022/03/05   02:59:33
+  SDRAM Memory Size   : 4096M bytes
+  FLASH Memory Size   : 64M bytes
+  CFCARD Memory Size  : 1600M bytes
+  ANGMHSTG0100 version information
+  PCB         Version : ANG1CXPL REV B
+  EPLD1       Version : V120
+  EPLD2       Version : V120
+  FPGA        Version : V120
+  PE          Version : 000
+  BootROM     Version : 08.66
+  BootLoad    Version : 08.66
+  Software    Version : Version 8.200 RELEASE 0001
+<atn-11111-Name1.SOCHI>system-view
+Enter system view, return user view with return command.
+[~atn-11111-Name1.SOCHI]interface GigabitEthernet0/2/19.10
+[~atn-11111-Name1.SOCHI-GigabitEthernet0/2/19.10]dis th
+#
+interface GigabitEthernet0/2/19.10
+ vlan-type dot1q 10
+ mtu 9500
+ description x_4 id1111111_OFM1111111_1c11111111
+ statistic enable
+ mpls l2vc 10.0.0.4 pw-template PW 192004051 ignore-standby-state
+ qos-profile 20M-in inbound 
+ qos-profile 20M-out outbound 
+ loop-detect enable
+#
+return
+[~atn-11111-Name1.SOCHI-GigabitEthernet0/2/19.10]commit
+[~atn-11111-Name1.SOCHI-GigabitEthernet0/2/19.10]return
+<atn-11111-Name1.SOCHI>save
+Warning: The current configuration will be written to the device.
+Are you sure to continue? [Y/N]:Y
+Now saving the current configuration to the slot 2 ....
+Info: Save the configuration successfully.
+<atn-11111-Name1.SOCHI>
+******* Соединение закрыто! *******
+
+
+
+******* IP: 10.0.0.103 подключен! *******
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Username:Username
+Password:
+Info: The max number of VTY users is 15, the number of current VTY users online is 1, and total number of terminal users online is 1.
+      The current login time is 2023-05-15 10:54:49+03:00.
+<atn-22222-Name2.SOCHI>dis version
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 8.200 (ATN 910C-G V300R006C10SPC300)
+Copyright (C) 2012-2020 Huawei Technologies Co., Ltd.
+HUAWEI ATN 910C-G uptime is 436 days, 8 hours, 35 minutes 
+Patch Version: V300R006SPH032
+
+ATN 910C-G version information:
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+CXP version information:
+
+CXP (Master) 2  : uptime is 436 days, 8 hours, 34 minutes
+  StartupTime   2022/03/05   02:14:55
+  SDRAM Memory Size   : 4096M bytes
+  FLASH Memory Size   : 64M bytes
+  CFCARD Memory Size  : 1600M bytes
+  ANGMHSTG0100 version information
+  PCB         Version : ANG1CXPL REV B
+  EPLD1       Version : V120
+  EPLD2       Version : V120
+  FPGA        Version : V120
+  PE          Version : 000
+  BootROM     Version : 08.66
+  BootLoad    Version : 08.66
+  Software    Version : Version 8.200 RELEASE 0001
+<atn-22222-Name2.SOCHI>system-view
+Enter system view, return user view with return command.
+[~atn-22222-Name2.SOCHI]interface GigabitEthernet0/2/21.1808
+
+[~atn-22222-Name2.SOCHI-GigabitEthernet0/2/21.1808]dis th
+#
+interface GigabitEthernet0/2/21.1808
+ vlan-type dot1q 1808
+ mtu 9500
+ description X_6 id2222222_OFM2222222_1c22222222
+ statistic enable
+ trust upstream default
+ mpls l2vc 10.0.0.4 pw-template PW 931808040 ignore-standby-state
+ qos-profile mobile-in inbound 
+ qos-profile mobile-out outbound 
+ loop-detect enable
+#
+return
+[~atn-22222-Name2.SOCHI-GigabitEthernet0/2/21.1808]commit
+[~atn-22222-Name2.SOCHI-GigabitEthernet0/2/21.1808]return
+<atn-22222-Name2.SOCHI>save
+Warning: The current configuration will be written to the device.
+Are you sure to continue? [Y/N]:Y
+Now saving the current configuration to the slot 2 ....
+Info: Save the configuration successfully.
+<atn-22222-Name2.SOCHI>
+******* Соединение закрыто! *******
